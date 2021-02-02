@@ -78,7 +78,7 @@ title, otherwise pass the candidate off to
   :global t
   (if ivy-exwm-mode
       (progn
-        (setq ivy-exwm-orig-switch-buffer-transformer (plist-get ivy--display-transformers-list 'ivy-switch-buffer) )
+        (setq ivy-exwm-orig-switch-buffer-transformer (ivy-alist-setting ivy--display-transformers-alist 'ivy-switch-buffer) )
         (ivy-set-display-transformer 'ivy-switch-buffer 'ivy-exwm-switch-buffer-transformer))
     (ivy-set-display-transformer 'ivy-switch-buffer ivy-exwm-orig-switch-buffer-transformer)))
 
